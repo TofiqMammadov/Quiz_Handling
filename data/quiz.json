@@ -1,0 +1,335 @@
+{
+    "title": "Ümumi Bilik Sualları",
+    "quiz": [
+        {
+            "q": "Riyaziyyatda ən kiçik müsbət sadə ədəd hansıdır?",
+            "a": [
+                "2",
+                "1",
+                "3",
+                "0"
+            ],
+            "t": 1
+        },
+        {
+            "q": "FIFA Dünya Kubokunu ən çox qazanmış komanda hansıdır?",
+            "a": [
+                "Braziliya",
+                "Almaniya",
+                "Fransa",
+                "İtaliya"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Əgər A → B doğru olarsa, onda B → A hansı vəziyyətdə doğrudur?",
+            "a": [
+                "A hər zaman doğrudur",
+                "B hər zaman doğrudur",
+                "Yanlışdır",
+                "Doğrudur"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Yer kürəsi hansı planetlər sırasında yerləşir?",
+            "a": [
+                "İkinci",
+                "Dördüncü",
+                "Birinci",
+                "Üçüncü"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Riyaziyyatda 5! (5 faktorial) nəticəsi nədir?",
+            "a": [
+                "120",
+                "720",
+                "60",
+                "24"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı futbolçu 2022-ci ildə Dünya Kubokunun ən yaxşı oyunçusu seçildi?",
+            "a": [
+                "Kylian Mbappé",
+                "Lionel Messi",
+                "Cristiano Ronaldo",
+                "Luka Modrić"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Bir adamın yaşı iki qat artıbsa, ilk yaşı neçədir?",
+            "a": [
+                "Tamdır",
+                "Hər yaşa uyğundur",
+                "Yarıya uyğundur",
+                "Əksikdir"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Fransanın paytaxtı haradır?",
+            "a": [
+                "Paris",
+                "Madrid",
+                "London",
+                "Berlin"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı kvadrat kök 64-dür?",
+            "a": [
+                "10",
+                "6",
+                "16",
+                "8"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Futbolda bir oyunda ən çox neçə oyunçu olur?",
+            "a": [
+                "11",
+                "20",
+                "22",
+                "12"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Məntiqdə, 'Bir nöqtədən keçən sonsuz sayda xətt' hansı ifadədir?",
+            "a": [
+                "Yanlışdır",
+                "Doğrudur",
+                "Qeyri-müəyyən",
+                "Sonsuzluq"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Futbol topunun çəkisi təxminən neçədir?",
+            "a": [
+                "400-450 qram",
+                "300-350 qram",
+                "500-550 qram",
+                "600-650 qram"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Dünya əhalisi təxminən neçə milyarddır (2024)?",
+            "a": [
+                "8 milyard",
+                "7 milyard",
+                "6 milyard",
+                "9 milyard"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı ölkə 2022-ci il Dünya Kubokuna ev sahibliyi etdi?",
+            "a": [
+                "Qətər",
+                "Braziliya",
+                "Almaniya",
+                "Fransa"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Bir həftədə neçə gün var?",
+            "a": [
+                "7",
+                "5",
+                "6",
+                "8"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı klub 'The Citizens' ləqəbini daşıyır?",
+            "a": [
+                "Chelsea",
+                "Arsenal",
+                "Liverpool",
+                "Manchester City"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Pifaqor teoreminə görə, a² + b² = ?",
+            "a": [
+                "c²",
+                "a²",
+                "b²",
+                "a²b²"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Dünyanın ən böyük okeanı hansıdır?",
+            "a": [
+                "Şimal Buzlu Okeanı",
+                "Sakit Okean",
+                "Hind Okeanı",
+                "Atlantik Okeanı"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Futbolda 'penalti' nə deməkdir?",
+            "a": [
+                "Topun qapıya atılması",
+                "Müəyyən məsafədən topun vurulması",
+                "Bütün oyunçuların qol vurması",
+                "Yalnız müdafiəçinin cəzası"
+            ],
+            "t": 0
+        },
+        {
+            "q": "3^3 neçədir?",
+            "a": [
+                "81",
+                "9",
+                "12",
+                "27"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Bir futbol oyunu neçənci dəqiqəyə qədər davam edir?",
+            "a": [
+                "80 dəqiqə",
+                "60 dəqiqə",
+                "90 dəqiqə",
+                "70 dəqiqə"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Riyaziyyatda 'orta' nə deməkdir?",
+            "a": [
+                "İki ədədin cəmi",
+                "İki ədədin ortalaması",
+                "İki ədədin fərqi",
+                "İki ədədin məhsulu"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Dünya müharibələrinin sayı nə qədərdir?",
+            "a": [
+                "Bir",
+                "İki",
+                "Üç",
+                "Dörd"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Hansı futbolçu 'Ballon d'Or' mükafatını ən çox qazanmışdır?",
+            "a": [
+                "Johan Cruyff",
+                "Lionel Messi",
+                "Michel Platini",
+                "Cristiano Ronaldo"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Bir düzbucaqlı neçə künc var?",
+            "a": [
+                "Üç",
+                "Dörd",
+                "Beş",
+                "Altı"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Məntiqdə, 'A və ya B' ifadəsi hansı vəziyyətdə yanlışdır?",
+            "a": [
+                "A doğrudur, B yanlışdır",
+                "A yanlışdır, B doğrudur",
+                "Hər ikisi yanlışdır",
+                "Hər ikisi doğrudur"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Riyaziyyatda 2^5 neçədir?",
+            "a": [
+                "32",
+                "16",
+                "8",
+                "64"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı ölkə 'Sarı Okean' adlanır?",
+            "a": [
+                "Braziliya",
+                "Çin",
+                "Fransa",
+                "İtaliya"
+            ],
+            "t": 1
+        },
+        {
+            "q": "Riyaziyyatda pi ədədi nədir?",
+            "a": [
+                "0.5",
+                "2.71",
+                "1.61",
+                "3.14"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Hansı dəniz yer üzərində ən dərin dənizdir?",
+            "a": [
+                "Red Sea",
+                "Caribbean Sea",
+                "Abyssal",
+                "Mariana"
+            ],
+            "t": 3
+        },
+        {
+            "q": "Hansı futbol mükafatı 'Qızıl Top' adlanır?",
+            "a": [
+                "Yaxşı oyunçu mükafatı",
+                "Yaxşı məşqçi mükafatı",
+                "Yaxşı komandalar mükafatı",
+                "Yaxşı qapıçı mükafatı"
+            ],
+            "t": 0
+        },
+        {
+            "q": "Hansı futbol liqası ən prestijli hesab olunur?",
+            "a": [
+                "La Liga",
+                "Serie A",
+                "İngiltərə Premyer Liqası",
+                "Bundesliga"
+            ],
+            "t": 2
+        },
+        {
+            "q": "Dünya səviyyəsində ən populyar idman növü hansıdır?",
+            "a": [
+                "Basketbol",
+                "Futbol",
+                "Tennis",
+                "Golf"
+            ],
+            "t": 1
+        }
+    ]
+}

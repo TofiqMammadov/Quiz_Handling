@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Quiz Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #adadad;
+        }
+
+        #milyoncu {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        h1,
+        h2 {
+            margin: 10px 0;
+            font-weight: normal;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        ul li:hover {
+            background-color: #f1f1f1;
+        }
+
+        ul li input {
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .result-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-list li {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            #milyoncu {
+                width: 95%;
+                padding: 15px;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.2rem;
+            }
+
+            ul li {
+                padding: 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="milyoncu">
+        <h1></h1>
+        <h2></h2>
+        <ul></ul>
+        <div id="btns">
+            <button></button>
+        </div>
+    </div>
+
+    <script>
+        let quiz = []
+        let randomQuiz = []
+        let title = ''
+        const BtnsDiv = document.getElementById('btns')
+        BtnsDiv.style.display = 'flex'
+        BtnsDiv.style.justifyContent = 'center'
+        BtnsDiv.style.gap = '10px'
+        const h1 = document.querySelector("h1")
+        const h2 = document.querySelector("h2")
+        const btn = document.querySelector("button")
+        const list = document.querySelector("ul")
+        const newbutton = document.createElement('button')
+
+        let c = 0 // Question count
+        let t_c = 0 // True count
+        let f_c = 0 // False count
+
+        const ajax = new XMLHttpRequest()
+        ajax.open("GET", './data/quiz.json')
+        ajax.send()
+        ajax.onload = function () {
+            let json = JSON.parse(ajax.responseText)
+            quiz = json.quiz
+            title = json.title
+            randomQuiz = getRandomQuestions(quiz, 3)
+            h1.innerHTML = "TEST:"
+            h2.innerHTML = title
+            btn.innerHTML = "Başla"
+            btn.setAttribute('onclick', "next()")
+        }
+
+        function getRandomQuestions(arr, num) {
+            let random_q = arr.sort(() => 0.5 - Math.random());
+            return random_q.slice(0, num);
+        }
+
+        function next() {
+            if (c < randomQuiz.length) {
+                let sual = randomQuiz[c]
+                let kod = ''
+                h1.innerHTML = `${c + 1}. Sual: `
+                h2.innerHTML = sual.q
+                sual.a.forEach((cvb, index) => kod += `<label><li id="li_${index}"><input onclick='keep_answer(${c}, ${index})' type="radio" name="cvb" /> ${cvb}</li></label>`);
+                list.innerHTML = kod
+                btn.innerHTML = 'Sonrakı'
+                c++
+                if (c == randomQuiz.length) {
+                    btn.innerHTML = "Nəticə"
+                    btn.setAttribute('onclick', "result()")
+                }
+            }
+        }
+
+        function result() {
+            h1.innerHTML = title
+            h2.innerHTML = "Testin nəticələri"
+            list.innerHTML = `
+                <li style="background-color: green; color: white;">Doğru: ${t_c}</li>
+                <li style="background-color: red; color: white;">Yalnış: ${f_c}</li>
+                <li style="background-color: yellow;">Cavablanmamış: ${randomQuiz.length - (t_c + f_c)}</li>
+            `
+            btn.innerHTML = "Yenidən başla"
+            btn.setAttribute('onclick', "restart()")
+
+            // BtnsDiv.append(newbutton)        !!!!!!!!!!!!!!!!!!!!!!!
+            // newbutton.innerHTML = 'Cavablarınız'     !!!!!!!!!!!!!!!!!!!!!!!
+            // newbutton.setAttribute('onclick', `ShowResults()`)       !!!!!!!!!!!!!!!!!!!!!!!
+        }
+
+        function keep_answer(c, index) {
+            const radioButtons = document.querySelectorAll(`input[name="cvb"]`);
+            radioButtons.forEach(radio => {
+                radio.disabled = true;
+            });
+
+            if (index == randomQuiz[c].t) {
+                t_c++;
+                let li = document.getElementById(`li_${index}`);
+                li.style.color = 'white';
+                li.style.backgroundColor = 'green';
+            }
+
+            else if (index != randomQuiz[c].t) {
+                f_c++;
+                let li = document.getElementById(`li_${index}`);
+                let true_li = document.getElementById(`li_${randomQuiz[c].t}`)
+                true_li.style.color = 'white';
+                true_li.style.backgroundColor = 'green';
+
+                li.style.color = 'white';
+                li.style.backgroundColor = 'red';
+            }
+        }
+
+        function restart() {
+            randomQuiz = getRandomQuestions(quiz, 3)
+            h1.innerHTML = "TEST:"
+            h2.innerHTML = title
+            btn.innerHTML = "Başla"
+            list.innerHTML = ``
+            t_c = 0
+            f_c = 0
+            c = 0
+            btn.setAttribute('onclick', "next()")
+
+            // newbutton.remove()
+        }
+
+        // function ShowResults(){
+        //     const review = document.createElement('div')
+        //     BtnsDiv.append(review)
+
+        //     review.style.color = '#333'
+        //     // review.innerHTML = `Cavablarınız burada gorunecek`   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        //     h1.innerHTML = "TEST CAVABLARINIZ:"
+        //     h2.innerHTML = title
+        //     list.innerHTML = ''
+        //     newbutton.remove()
+        // }
+    </script>
+</body>
+
+</html>
