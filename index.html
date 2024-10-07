@@ -158,7 +158,7 @@
             let json = JSON.parse(ajax.responseText)
             quiz = json.quiz
             title = json.title
-            randomQuiz = getRandomQuestions(quiz, 3)
+            randomQuiz = getRandomQuestions(quiz, 10)
             h1.innerHTML = "TEST:"
             h2.innerHTML = title
             btn.innerHTML = "Başla"
@@ -229,7 +229,7 @@
         }
 
         function restart() {
-            randomQuiz = getRandomQuestions(quiz, 3)
+            randomQuiz = getRandomQuestions(quiz, 10)
             h1.innerHTML = "TEST:"
             h2.innerHTML = title
             btn.innerHTML = "Başla"
